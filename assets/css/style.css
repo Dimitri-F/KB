@@ -78,7 +78,6 @@
     .logo{
       width:100px;
       background:linear-gradient( rgba(247,243,238,0.01));
-      box-shadow:1px 2px 1px 0 rgba(0,0,0,0.08);
       border-radius:var(--radius);
     }
 
@@ -269,6 +268,7 @@
       margin-bottom:12px;
       font-size:1.25rem;
       font-weight:500;
+      text-align:justify;
     }
 
 
@@ -361,7 +361,7 @@
 
     /* GALLERY */
 
-    .gallery-grid{
+    /* .gallery-grid{
       columns:3 320px;
       column-gap:24px;
     }
@@ -369,7 +369,104 @@
     .gallery-grid img{
       margin-bottom:24px;
       border-radius:var(--radius);
+    } */
+    
+    /* =========================
+   GALLERY CAROUSEL
+========================= */
+
+.gallery-carousel{
+
+  display:flex;
+  gap:24px;
+
+  overflow-x:auto;
+  overflow-x:scroll;
+  overflow-y:hidden;
+
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+
+  padding:10px 5vw 20px;
+
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+
+}
+
+.gallery-carousel::-webkit-scrollbar{
+  display:none;
+}
+
+.gallery-slide{
+
+  flex:0 0 75%;
+  max-width:900px;
+
+  scroll-snap-align:center;
+
+  border-radius:24px;
+  overflow:hidden;
+
+  position:relative;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.gallery-slide img{
+
+  width:100%;
+  height:600px;
+
+  object-fit:cover;
+
+  transition:
+    transform .8s ease,
+    filter .8s ease;
+
+}
+
+/* Hover */
+
+.gallery-slide:hover img{
+
+  transform:scale(1.05);
+
+}
+
+/* Scroll animation */
+
+@supports (animation-timeline: view()) {
+
+  .gallery-slide{
+
+    animation:fadeSlide linear both;
+
+    animation-timeline:view(x);
+
+    animation-range:
+      entry 20%
+      cover 40%;
+  }
+
+  @keyframes fadeSlide {
+
+    from{
+      opacity:.4;
+      transform:scale(.92);
     }
+
+    to{
+      opacity:1;
+      transform:scale(1);
+    }
+
+  }
+
+}
+
 
     /* PRIVATE */
 
