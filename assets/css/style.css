@@ -1,8 +1,8 @@
 *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
     :root{
       --bg:#f7f3ee;
@@ -103,7 +103,24 @@
       color:var(--brown);
     }
 
-    .nav-cta{
+  .social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-links a {
+  color: #222;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  opacity: 0.7;
+}
+
+    /* .nav-cta{
       padding:14px 24px;
       border:1px solid rgba(0,0,0,0.08);
       border-radius:999px;
@@ -115,7 +132,7 @@
     .nav-cta:hover{
       background:var(--accent);
       color:white;
-    }
+    } */
 
     /* HERO */
 
