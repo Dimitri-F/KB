@@ -46,6 +46,14 @@
       color:inherit;
     }
 
+    ul {
+      list-style:none;
+    }
+
+    li{
+      margin-bottom:8px;
+    }
+
     .container{
       width:90%;
       max-width:var(--container);
