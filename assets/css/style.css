@@ -99,7 +99,7 @@
 
     nav{
       display:flex;
-      gap:70px;
+      gap:40px;
       font-size:1.8rem;
       font-weight:500;
       color:var(--text);
@@ -635,19 +635,16 @@
 
     /* RESPONSIVE */
 
-    @media(max-width:1080px){
+    @media(max-width:1090px){
 
       nav{
-        gap:20px;
+        gap:10px;
+        display:none;
       }
 
     }
 
     @media(max-width:900px){
-
-      nav{
-        display:none;
-      }
 
       .story{
         grid-template-columns:1fr;
