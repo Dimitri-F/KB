@@ -35,6 +35,10 @@
       overflow-x:hidden;
     }
 
+    body.menu-open{
+      overflow:hidden;
+}
+
     img{
       width:100%;
       display:block;
@@ -504,8 +508,6 @@
     right:-32px;
 }
 
-
-
     /* PRIVATE */
 
     .private{
@@ -633,6 +635,110 @@
       font-size:0.9rem;
     }
 
+/* BOUTON BURGER */
+
+    .burger{
+    width:48px;
+    height:48px;
+
+    border:none;
+    background:none;
+    cursor:pointer;
+
+    display:none;
+
+    position:relative;
+    z-index:2000;
+    border-radius: var(--radius);
+}
+
+.burger span{
+    position:absolute;
+
+    left:10px;
+
+    width:28px;
+    height:2px;
+
+    background:var(--text);
+
+    transition:.4s ease;
+    top:23px;
+
+}
+
+.burger span:first-child{
+    top:18px;
+}
+
+.burger span:last-child{
+    top:28px;
+}
+
+/* ANIMATION BURGER */
+
+.burger.active span:first-child{
+    transform:rotate(45deg);
+    top:23px;
+}
+
+.burger.active span:last-child{
+    transform:rotate(-45deg);
+    top:23px;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+
+    position:fixed;
+    inset:0;
+
+    background:#f7f3ee;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.5s ease;
+
+    z-index:1500;
+}
+
+.mobile-menu.active{
+    opacity:0.95;
+    visibility:visible;
+}
+
+.mobile-nav{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:30px;
+}
+
+.mobile-nav a{
+
+    text-decoration:none;
+    color:var(--text);
+
+    font-size:clamp(2rem,6vw,4rem);
+    font-weight:400;
+
+    transition:.3s;
+}
+
+.mobile-nav a:hover{
+    color:var(--accent);
+}
+
+
     /* RESPONSIVE */
 
     @media(max-width:1090px){
@@ -641,6 +747,10 @@
         gap:10px;
         display:none;
       }
+
+      .burger{
+        display:block;
+    }
 
     }
 
