@@ -769,14 +769,14 @@
       }
 
       .hero{
-        text-align:left;
-        align-items:flex-end;
+        /* text-align:left;
+        align-items:flex-end; */
         padding-bottom:120px;
       }
 
-      .hero-buttons{
+      /* .hero-buttons{
         justify-content:flex-start;
-      }
+      } */
 
       .gallery-slide{
 

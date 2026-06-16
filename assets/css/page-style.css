@@ -186,12 +186,13 @@ body{
     font-weight:400;
     font-family: 'Dancing Script', cursive;
     color:var(--blue);
+    text-align: center;
 }
 
 .privatisation p{
     font-size:1.5rem;
     color:var(--s);
-    text-align:center;
+    text-align:justify;
     margin-bottom:20px;
 }
 
