@@ -137,76 +137,76 @@
 
     /* HERO */
 
-    .hero{
-      height:100vh;
-      position:relative;
-      top:40px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      overflow:hidden;
-    }
+.hero{
+  height:100vh;
+  position:relative;
+  top:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
 
-    .hero img{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-    }
+.hero img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
 
-    .overlay{
-      position:absolute;
-      inset:0;
-      background: linear-gradient( rgba(0,0,0, 0.5), rgba(0,0,0,0.5) ), url('') no-repeat center center/cover;
-    }
+.overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient( rgba(0,0,0, 0.5), rgba(0,0,0,0.5) ), url('') no-repeat center center/cover;
+}
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      color:white;
-      width:90%;
-      max-width:760px;
-    }
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:white;
+  width:90%;
+  max-width:760px;
+}
 
-    .hero h1{
-      font-family: 'Dancing Script', cursive;
-      font-size:clamp(2rem,7vw,5rem);
-      line-height:1.05;
-      font-weight:500;
-      margin-bottom:24px;
-    }
+.hero h1{
+  font-family: 'Dancing Script', cursive;
+  font-size:clamp(2rem,7vw,5rem);
+  line-height:1.05;
+  font-weight:500;
+  margin-bottom:24px;
+}
 
-    .hero p{
-      font-family:'EB Garamond', serif;
-      font-size:1.5rem;
-      opacity:0.92;
-      margin-bottom:40px;
-    }
+.hero p{
+  font-family:'EB Garamond', serif;
+  font-size:1.5rem;
+  opacity:0.92;
+  margin-bottom:40px;
+}
 
-    .hero-buttons{
-      display:flex;
-      gap:16px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
-    .btn-primary,
-    .btn-secondary{
-      padding:16px 28px;
-      border-radius:999px;
-      transition:var(--slow);
-      font-family:'EB Garamond', serif;
-      font-size:1.1rem;
-      font-weight:600;
-      background:var(--accent);
-      color:white;
-    }
+.btn-primary,
+.btn-secondary{
+  padding:16px 28px;
+  border-radius:999px;
+  transition:var(--slow);
+  font-family:'EB Garamond', serif;
+  font-size:1.1rem;
+  font-weight:600;
+  background:var(--accent);
+  color:white;
+}
 
-    .btn-secondary:hover, .btn-primary:hover{
-      background:#9f5b39;
-      color:white;
-    }
+.btn-secondary:hover, .btn-primary:hover{
+  background:#9f5b39;
+  color:white;
+}
 
     /* HERO TEXT ANIMATIONS */
 
@@ -323,6 +323,7 @@
     /* MENU */
 
     .menu-preview{
+      padding: 70px 0;
       background:var(--green);
       color:var(--white);
     }
@@ -379,7 +380,6 @@
       font-size:0.95rem;
     }
 
-    
    /* GALLERY CAROUSEL */
 
     .gallery-wrapper{
@@ -583,7 +583,7 @@
       color: var(--accent)
     }
 
-    .reassurance-card ul{
+    .reassurance-grid .reassurance-card ul{
       list-style: circle;
     }
 
@@ -774,7 +774,7 @@
       }
 
       section{
-        padding:88px 0;
+        padding:88px 0 0px;
       }
 
       .hero{

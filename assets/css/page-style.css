@@ -27,6 +27,8 @@ body{
     color:var(--accent);
 }
 
+
+/* PAGE CONCEPT */
 /* HERO */
 
 .concept-hero{
@@ -67,12 +69,29 @@ body{
     font-weight:400;
     margin-bottom:30px;
     font-family: 'Dancing Script', cursive;
+    transform:translateY(24px);
+    animation:fadeUp 1.2s ease forwards;
 }
 
 .hero-content p{
     font-size:1.5rem;
     opacity:.9;
+    animation:fadeUp 1.2s ease forwards;
 }
+
+.hero-content h1{
+  animation-delay:0.5s;
+}
+
+.hero-content p{
+  animation-delay:0.8s;
+}
+
+.story h2, .story p{
+    animation:fadeUp 1.2s ease forwards;
+}
+
+/* PAGE CONCEPT PARALLAX */
 
 
 /* QUOTE */
@@ -143,26 +162,27 @@ body{
     padding:70px 0;
 }
 
-.contact h2{
+.contact h2, .horaire h2{
     font-size:clamp(3rem,3vw,5rem);
     line-height:1;
     margin-bottom:30px;
     font-weight:400;
     font-family: 'Dancing Script', cursive;
     color:var(--blue);
+    text-align: center;
 }
 
-.contact p{
+.contact p, .horaire p{
     font-size:1.3rem;
     color:var(--s);
-    text-align:center;
+    text-align:justify;
     margin-bottom:20px;
 }
 
 .contact .reassurance-card{
     padding:70px;
     background:var(--white);
-    text-align:center;
+    text-align:justify;
     margin-bottom:20px;
 }
 
@@ -171,6 +191,15 @@ body{
     justify-content:center;
     gap:20px;
     margin-top:20px;
+}
+
+/* PAGE HORAIRE */
+
+.horaire .reassurance-card{
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
 }
 
 /* PAGE PRIVATISATION */
@@ -349,6 +378,10 @@ body{
      .pdf-viewer iframe{
         height:700px;
     }
+
+    .horaire .reassurance-card{
+    display: block;
+}
 
 }
 
