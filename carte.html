@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/page-style.css">
 </head>
 <body>
 
@@ -59,8 +59,58 @@
   </div>
 </header>
 
-<section>
-    
+<section class="documents-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Découvrez nos plats et nos boissons</h2>
+        </div>
+
+        <div class="pdf-tabs">
+
+            <button
+                class="pdf-tab active"
+                data-pdf="assets/pdf/menu-semaine.pdf">
+                Menu de la semaine
+            </button>
+
+            <button
+                class="pdf-tab"
+                data-pdf="assets/pdf/carte-boissons.pdf">
+                Boissons
+            </button>
+
+        </div>
+
+        <div class="pdf-download">
+
+            <a
+                id="pdfDownload"
+                href="assets/pdf/menu-semaine.pdf"
+                class="btn-primary">
+
+                Ouvrir le document en plein écran
+
+            </a>
+
+        </div>
+
+        <div class="pdf-viewer">
+
+            <iframe
+                id="pdfFrame"
+                src="assets/pdf/menu-semaine.pdf"
+                title="Document PDF"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+        
+
+    </div>
+
 </section>
 
 <footer>
@@ -173,5 +223,6 @@
 
 </div>
 <script src="assets/js/mobile-menu.js"></script>
+<script src="assets/js/pdf-controller.js"></script>
 </body>
 </html>
