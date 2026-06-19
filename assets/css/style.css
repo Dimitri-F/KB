@@ -514,11 +514,15 @@
       position:relative;
       overflow:hidden;
       border-radius:32px;
+      height:720px; /* hauteur du bloc */
     }
 
     .private img{
-      height:720px;
-    }
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
     .private-overlay{
       position:absolute;
@@ -565,7 +569,7 @@
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:24px;
-      margin-top:56px;
+      margin:56px auto;
     }
 
     .reassurance-card{
@@ -585,6 +589,12 @@
 
     .reassurance-grid .reassurance-card ul{
       list-style: circle;
+    }
+
+    .container h3{
+      font-family: 'Dancing script', cursive;
+      font-size: 2rem;
+      color:var(--green)
     }
 
     /* FOOTER */
