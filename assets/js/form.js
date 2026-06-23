@@ -3,11 +3,11 @@ setTimeout(() => {
 
     alerts.forEach(alert => {
         alert.style.opacity = '0';
-        alert.style.transition = '0.4s';
+        alert.style.transition = '0.5s';
 
         setTimeout(() => {
             alert.remove();
-        }, 400);
+        }, 500);
     });
 
 }, 5000);
