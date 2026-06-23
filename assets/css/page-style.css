@@ -229,6 +229,89 @@ body{
     text-align:justify;
 }
 
+/* FORMULAIRE */
+.private-form{
+  max-width:700px;
+  margin:auto;
+  padding:48px;
+  background:#fff;
+  border-radius:32px;
+  box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+
+.private-form form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.private-form input,
+.private-form textarea{
+  width:100%;
+  padding:18px 22px;
+  border:1px solid #e5e5e5;
+  border-radius:16px;
+  font-size:1rem;
+  font-family:inherit;
+  background:#fafafa;
+  transition:.3s ease;
+}
+
+.private-form textarea{
+  min-height:180px;
+  resize:vertical;
+}
+
+.private-form input:focus,
+.private-form textarea:focus{
+  outline:none;
+  border-color:#ff7a00;
+  background:#fff;
+  box-shadow:0 0 0 4px rgba(255,122,0,.15);
+}
+
+.private-form input::placeholder,
+.private-form textarea::placeholder{
+  color:#999;
+}
+
+.private-form button{
+  align-self:flex-start;
+  padding:16px 36px;
+  border:none;
+  border-radius:999px;
+  background:#ff7a00;
+  color:#fff;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.private-form button:hover{
+  transform:translateY(-2px);
+  background:var(--accent);
+  box-shadow:0 8px 20px rgba(255,122,0,.3);
+}
+
+.private-form button:active{
+  transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+  .private-form{
+    padding:32px 24px;
+    border-radius:24px;
+  }
+
+  .private-form button{
+    width:100%;
+    justify-content:center;
+  }
+
+}
+
 /* PAGE EMPLACEMENTS */
 
 .map-section{

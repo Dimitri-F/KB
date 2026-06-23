@@ -1,0 +1,276 @@
+<?php
+
+$success = isset($_GET['success']);
+$error = isset($_GET['error']);
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>KB — Cuisine nomade bistronomique</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/page-style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/photos/logoKB-fond-transp.png" alt="Logo KB">
+        </a>
+      </div>
+
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="concept.html">Le concept</a>
+        <a href="carte.html">Notre carte</a>
+        <a href="privatisation.php">Privatisation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/kb.bzh29/" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <button class="burger" id="burgerBtn">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+  </header>
+
+  <section>
+
+    <div class="container privatisation">
+
+      <?php if ($success): ?>
+
+        <div class="alert success">
+          Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.
+        </div>
+
+      <?php endif; ?>
+
+
+      <?php if ($error): ?>
+
+        <div class="alert error">
+          Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.
+        </div>
+
+      <?php endif; ?>
+
+      <div class="section-label">Privatisation</div>
+
+      <div class="private-card">
+
+        <h2>
+          Vous souhaitez apporter une touche gourmande et conviviale à votre événement ?
+        </h2>
+
+        <p>Nous proposons des prestations sur mesure pour vos événements privés et
+          professionnels : mariages, anniversaires, repas de famille, événements d'entreprise,
+          inaugurations, marchés ou festivals.
+        </p>
+
+        <p>
+          Notre cuisine est élaborée à partir de produits frais, locaux et de saison, avec une carte adaptée à votre événement et à vos envies.
+        </p>
+
+        <p>
+          Nous assurons les prestations jusqu'à 60 personnes maximum afin de garantir la
+          qualité de notre cuisine et de notre service.
+        </p>
+
+        <p>
+          Chaque demande étant unique, nous étudions votre projet en fonction de vos
+          besoins et de nos disponibilités afin de vous proposer la solution la plus adaptée
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="container private-form">
+
+      <form action="traitement-contact.php" method="POST">
+
+        <input
+          type="text"
+          name="nom"
+          placeholder="Votre nom"
+          required>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Votre email"
+          required>
+
+        <input
+          type="tel"
+          name="telephone"
+          placeholder="Votre téléphone">
+
+        <textarea
+          name="message"
+          placeholder="Votre message"
+          required></textarea>
+
+        <!--  anti-spam -->
+        <input
+          type="text"
+          name="website"
+          style="display:none">
+
+        <button type="submit">
+          Envoyer
+        </button>
+
+      </form>
+    </div>
+
+  </section>
+
+  <section class="concept-cta">
+
+    <div class="container ">
+
+      <h2>
+        N'hésitez pas à nous contacter pour échanger sur votre événement et obtenir un
+        devis personnalisé.
+      </h2>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-secondary">Nous contacter</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-logo">
+            <img src="assets/photos/Logo pour tablier.png" alt="Logo KB">
+          </div>
+
+          <p>
+            Cuisine nomade bistronomique locale et de saison.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li> <a href="concept.html">Le concept</a></li>
+            <li><a href="carte.html">Notre carte</a></li>
+            <li><a href="emplacements.html">Emplacements</a></li>
+            <li><a href="privatisation.php">Privatisation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Horaires</h4>
+          <ul>
+            <li><a href="horaires.html" target="_blank">Consulter les horaires</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a href="mailto:kreizennblaz@gmail.com">
+                <i class="fa-solid fa-envelope"></i> kreizennblaz@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> kb.bzh29
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i> Kb Bzh
+              </a>
+            </li>
+            <li>
+              <a href="tel:+33788922872">
+                <i class="fa-solid fa-phone"></i> 07 88 92 28 72
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>© KB — Tous droits réservés</span>
+
+        <span>Mentions légales</span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <nav class="mobile-nav">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="concept.html">Le concept</a>
+
+      <a href="carte.html">Notre carte</a>
+
+      <a href="privatisation.php">Privatisation</a>
+
+      <a href="contact.html">Contact</a>
+
+    </nav>
+
+  </div>
+  <script src="assets/js/mobile-menu.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+
+</html>
