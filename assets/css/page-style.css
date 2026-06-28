@@ -51,7 +51,7 @@ body{
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.35);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('') no-repeat center center/cover;
 }
 
 .hero-content{
@@ -186,6 +186,11 @@ body{
     margin-top:20px;
 }
 
+.social-contact{
+    display: flex;
+    align-items: center;
+}
+
 /* PAGE HORAIRE */
 
 .horaire .reassurance-card{
@@ -193,6 +198,11 @@ body{
     display: flex;
     justify-content:space-around;
     align-items: center;
+}
+
+.label-jour{
+    font-weight: bold;
+    color: var(--accent);
 }
 
 /* PAGE PRIVATISATION */
@@ -250,6 +260,7 @@ body{
 .private-form textarea{
   min-height:180px;
   resize:vertical;
+font-size: 1.2em;
 }
 
 .private-form input:focus,
@@ -262,7 +273,8 @@ body{
 
 .private-form input::placeholder,
 .private-form textarea::placeholder{
-  color:#999;
+  color: var(--text);
+  font-size: 1.2em;
 }
 
 .private-form button{
@@ -356,7 +368,7 @@ body{
 
 .documents-section .container{
     max-width:1200px;
-    margin:auto;
+    margin:50px auto;
 }
 
 .section-title{

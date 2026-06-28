@@ -17,13 +17,9 @@ $error = isset($_GET['error']);
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <link rel="stylesheet" href="assets/css/page-style.css">
 </head>
@@ -48,12 +44,12 @@ $error = isset($_GET['error']);
       </nav>
 
       <div class="social-links">
-        <a href="https://www.instagram.com/kb.bzh29/" target="_blank" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
+          <img src="assets/images/instagram.svg" alt="Instagram" width="24" height="24">
         </a>
 
-        <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
+        <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
+          <img src="assets/images/facebook.svg" alt="Instagram" width="24" height="24">
         </a>
       </div>
 
@@ -165,10 +161,10 @@ $error = isset($_GET['error']);
 
     <div class="container ">
 
-      <h2>
+      <h3>
         N'hésitez pas à nous contacter pour échanger sur votre événement et obtenir un
         devis personnalisé.
-      </h2>
+      </h3>
 
       <div class="hero-buttons">
         <a href="contact.html" class="btn-secondary">Nous contacter</a>
@@ -216,23 +212,30 @@ $error = isset($_GET['error']);
           <h4>Contact</h4>
           <ul>
             <li>
-              <a href="mailto:kreizennblaz@gmail.com">
-                <i class="fa-solid fa-envelope"></i> kreizennblaz@gmail.com
+              <a href="mailto:kreizennblaz@gmail.com" target="_blank" rel="noopener noreferrer">
+                <span>kreizennblaz@gmail.com</span>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
-                <i class="fa-brands fa-instagram"></i> kb.bzh29
+              <a href="https://www.instagram.com/kb.bzh29/" target="_blank" rel="noopener noreferrer">
+                <div class="social-footer">
+                  <img src="assets/images/instagram.svg" class="svg" alt="" width="20" height="20">
+                  <span class="social-label">kb.bzh29</span>
+                </div>
+                
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
-                <i class="fa-brands fa-facebook-f"></i> Kb Bzh
+              <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" rel="noopener noreferrer">
+                <div class="social-footer">
+                    <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
+                    <span class="social-label">Kb Bzh</span>
+                </div> 
               </a>
             </li>
             <li>
-              <a href="tel:+33788922872">
-                <i class="fa-solid fa-phone"></i> 07 88 92 28 72
+              <a href="tel:+33788922872" target="_blank" rel="noopener noreferrer">
+                <span>07 88 92 28 72</span>
               </a>
             </li>
           </ul>
