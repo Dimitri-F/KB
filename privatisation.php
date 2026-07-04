@@ -66,6 +66,49 @@ $error = isset($_GET['error']);
 
   <section>
 
+  <div class="container story">
+
+    <div class="story-text">
+
+      <div class="section-label">Concept</div>
+
+      <div class="parallax-title">
+          <h2>
+            Titre / phrase d'accroche
+          </h2>
+
+        <p class="parallax-text">
+            Une aventure née d'une envie simple, proposer une cuisine sincère, gourmande et accessible, leprojet prend racine en Bretagne, au cœur du Pays Bigouden.
+        </p>
+
+        <p class="parallax-text">
+            Derrière ce food truck se cache une conviction forte : les meilleurs moments se vivent souvent autour d'une bonne table, d'un repas partagé et de produits travaillés avec respect.
+        </p>
+      </div>
+      
+
+      <div class="section-label">Marie la cheffe</div>
+
+        <p>
+            Aux commandes, Marie, cheffe passionnée depuis plus de dix ans. Au fil de son
+            parcours, elle a développé une cuisine qui lui ressemble : généreuse, créative et
+            ouverte sur le monde. Ses voyages, ses rencontres et ses expériences ont nourri
+            son inspiration tout en renforçant son attachement aux produits locaux et aux
+            savoir-faire de son territoire.
+        </p>
+
+    </div>
+
+    <div class="story-image">
+      <img src="assets/photos/photo-page-concept-2.jpeg" alt="Produits KB">
+    </div>
+
+  </div>
+
+</section>
+
+  <section>
+
     <div class="container privatisation">
 
       <?php if ($success): ?>
