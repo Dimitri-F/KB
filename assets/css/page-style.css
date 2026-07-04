@@ -152,6 +152,12 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 
+.concept-cta p{
+    color:var(--text);
+    text-align:center;
+    margin:2%;
+}
+
 /* PAGE CONTACT */
 .contact{
     padding:70px 0;
@@ -207,8 +213,12 @@ body{
 
 /* PAGE PRIVATISATION */
 
+/* .privatisation-section{
+    background-color:var(--accent-soft);
+} */
+
 .privatisation{
-    padding:70px 0;
+    padding:70px 0 0;
 }
 
 .privatisation h2{
@@ -221,7 +231,7 @@ body{
 }
 
 .privatisation p{
-    color:var(--s);
+    color:var(--text);
     text-align:justify;
     margin-bottom:20px;
 }
@@ -280,7 +290,6 @@ font-size: 1.2em;
 }
 
 .private-form button{
-  align-self:flex-start;
   padding:16px 36px;
   border:none;
   border-radius:999px;
@@ -293,7 +302,7 @@ font-size: 1.2em;
 
 .private-form button:hover{
   transform:translateY(-2px);
-  background:var(--accent);
+  background:var(--brown);
   box-shadow:0 8px 20px rgba(255,122,0,.3);
 }
 

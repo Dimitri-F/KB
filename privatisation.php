@@ -64,50 +64,7 @@ $error = isset($_GET['error']);
     </div>
   </header>
 
-  <section>
-
-  <div class="container story">
-
-    <div class="story-text">
-
-      <div class="section-label">Concept</div>
-
-      <div class="parallax-title">
-          <h2>
-            Titre / phrase d'accroche
-          </h2>
-
-        <p class="parallax-text">
-            Une aventure née d'une envie simple, proposer une cuisine sincère, gourmande et accessible, leprojet prend racine en Bretagne, au cœur du Pays Bigouden.
-        </p>
-
-        <p class="parallax-text">
-            Derrière ce food truck se cache une conviction forte : les meilleurs moments se vivent souvent autour d'une bonne table, d'un repas partagé et de produits travaillés avec respect.
-        </p>
-      </div>
-      
-
-      <div class="section-label">Marie la cheffe</div>
-
-        <p>
-            Aux commandes, Marie, cheffe passionnée depuis plus de dix ans. Au fil de son
-            parcours, elle a développé une cuisine qui lui ressemble : généreuse, créative et
-            ouverte sur le monde. Ses voyages, ses rencontres et ses expériences ont nourri
-            son inspiration tout en renforçant son attachement aux produits locaux et aux
-            savoir-faire de son territoire.
-        </p>
-
-    </div>
-
-    <div class="story-image">
-      <img src="assets/photos/photo-page-concept-2.jpeg" alt="Produits KB">
-    </div>
-
-  </div>
-
-</section>
-
-  <section>
+  <section class="privatisation-section">
 
     <div class="container privatisation">
 
@@ -150,52 +107,8 @@ $error = isset($_GET['error']);
           qualité de notre cuisine et de notre service.
         </p>
 
-        <p>
-          Chaque demande étant unique, nous étudions votre projet en fonction de vos
-          besoins et de nos disponibilités afin de vous proposer la solution la plus adaptée
-        </p>
-
       </div>
 
-    </div>
-
-    <div class="container private-form">
-
-      <form action="traitement-contact.php" method="POST">
-
-        <input
-          type="text"
-          name="nom"
-          placeholder="Votre nom"
-          required>
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Votre email"
-          required>
-
-        <input
-          type="tel"
-          name="telephone"
-          placeholder="Votre téléphone">
-
-        <textarea
-          name="message"
-          placeholder="Votre message"
-          required></textarea>
-
-        <!--  anti-spam -->
-        <input
-          type="text"
-          name="website"
-          style="display:none">
-
-        <button type="submit">
-          Envoyer
-        </button>
-
-      </form>
     </div>
 
   </section>
@@ -209,11 +122,51 @@ $error = isset($_GET['error']);
         devis personnalisé.
       </h3>
 
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn-secondary">Nous contacter</a>
+      <div class="container private-form">
+
+        <form action="traitement-contact.php" method="POST">
+
+          <input
+            type="text"
+            name="nom"
+            placeholder="Votre nom"
+            required>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Votre email"
+            required>
+
+          <input
+            type="tel"
+            name="telephone"
+            placeholder="Votre téléphone">
+
+          <textarea
+            name="message"
+            placeholder="Votre message"
+            required></textarea>
+
+          <!--  anti-spam -->
+          <input
+            type="text"
+            name="website"
+            style="display:none">
+
+          <button type="submit">
+            Envoyer
+          </button>
+
+        </form>
       </div>
 
     </div>
+
+    <p>
+      Chaque demande étant unique, nous étudions votre projet en fonction de vos
+      besoins et de nos disponibilités afin de vous proposer la solution la plus adaptée.
+    </p>
 
   </section>
 
@@ -265,15 +218,15 @@ $error = isset($_GET['error']);
                   <img src="assets/images/instagram.svg" class="svg" alt="" width="20" height="20">
                   <span class="social-label">kb.bzh29</span>
                 </div>
-                
+
               </a>
             </li>
             <li>
               <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" rel="noopener noreferrer">
                 <div class="social-footer">
-                    <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
-                    <span class="social-label">Kb Bzh</span>
-                </div> 
+                  <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
+                  <span class="social-label">Kb Bzh</span>
+                </div>
               </a>
             </li>
             <li>
