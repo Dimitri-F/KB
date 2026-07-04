@@ -662,7 +662,7 @@ nav a:hover {
 footer {
   background: var(--blue);
   color: var(--white);
-  padding: 80px 0 80px;
+  padding: 80px 0 20px;
 }
 
 .footer-grid {
