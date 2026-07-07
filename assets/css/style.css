@@ -49,6 +49,7 @@ img {
   width: 100%;
   display: block;
   object-fit: cover;
+  margin: auto;
 }
 
 .svg {
@@ -360,8 +361,12 @@ nav a:hover {
 .story {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 50px;
   align-items: center;
+}
+
+.story-second{
+  padding-top: 70px;
 }
 
 .story-text h2 {
@@ -746,13 +751,12 @@ footer li a:hover {
   left: 10px;
 
   width: 28px;
-  height: 2px;
+  height: 3px;
 
   background: var(--text);
 
   transition: .4s ease;
   top: 23px;
-
 }
 
 .burger span:first-child {
