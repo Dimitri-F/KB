@@ -231,7 +231,7 @@ $error = isset($_GET['error']);
             </li>
             <li>
               <a href="tel:+33788922872" target="_blank" rel="noopener noreferrer">
-                <span>07 88 92 28 72</span>
+                <span>06 62 71 27 08</span>
               </a>
             </li>
           </ul>

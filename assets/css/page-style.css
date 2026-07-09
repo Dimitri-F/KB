@@ -26,6 +26,10 @@ body{
     color:var(--accent);
 }
 
+.immersive-overlay img{
+    border-radius:var(--radius);
+}
+
 
 /* PAGE CONCEPT */
 /* HERO */
