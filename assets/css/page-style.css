@@ -93,9 +93,6 @@ body{
     animation:fadeUp 1.2s ease forwards;
 }
 
-/* PAGE CONCEPT PARALLAX */
-
-
 /* QUOTE */
 
 .quote-section{
@@ -202,6 +199,10 @@ body{
 }
 
 /* PAGE HORAIRE */
+
+.section-horaire{
+    margin: 70px 0;
+}
 
 .horaire .reassurance-card{
     margin: auto;
@@ -457,6 +458,115 @@ font-size: 1.2em;
     transform:translateY(-2px);
 }
 
+/* MENTIONS LEGALES */
+
+.page-header {
+
+    padding: 40px 0;
+
+    background: var(--bg);
+
+}
+
+.page-header .logo img {
+
+    width: 90px;
+
+}
+
+.legal-hero {
+
+    padding: 120px 0 80px;
+
+}
+
+.section-tag {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--accent);
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-size: .8rem;
+
+}
+
+.legal-hero h1 {
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    margin-bottom: 24px;
+
+    font-weight: 600;
+
+}
+
+.legal-hero p {
+
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+}
+
+.legal-content {
+
+    padding-bottom: 120px;
+
+}
+
+.legal-content .container {
+
+    max-width: 900px;
+
+}
+
+.legal-content article {
+
+    padding: 48px 0;
+
+    border-top: 1px solid rgba(0, 0, 0, .08);
+
+}
+
+.legal-content article:last-child {
+
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+
+}
+
+.legal-content h2 {
+
+    font-size: 1.55rem;
+
+    margin-bottom: 18px;
+
+    font-weight: 600;
+
+}
+
+.legal-content p {
+
+    color: var(--muted);
+
+    line-height: 1.9;
+
+}
+
+.legal-content strong {
+
+    color: var(--text);
+
+}
 
 
 /* RESPONSIVE */
@@ -501,7 +611,7 @@ font-size: 1.2em;
     }
 
     .map-section h2{
-        margin-bottom: 20px;
+        margin-top: 40px;
     }
 
     .map-container{

@@ -667,7 +667,7 @@ nav a:hover {
 footer {
   background: var(--blue);
   color: var(--white);
-  padding: 80px 0 20px;
+  padding: 20px 0;
 }
 
 .footer-grid {
@@ -724,6 +724,11 @@ footer li a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 24px;
+  color: #9d9388;
+  font-size: 0.9rem;
+}
+
+.span-mentions {
   color: #9d9388;
   font-size: 0.9rem;
 }

@@ -243,7 +243,7 @@ $error = isset($_GET['error']);
 
         <span>© KB — Tous droits réservés</span>
 
-        <span>Mentions légales</span>
+        <a href="mentions-legales.html" class="span-mentions"><span>Mentions légales</span></a>
 
       </div>
 
