@@ -4,24 +4,22 @@ Options -Indexes
 # Page d'accueil
 DirectoryIndex index.html index.php
 
-# Forcer HTTPS
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Forcer HTTPS
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Ne pas réécrire les fichiers ou dossiers existants
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # URL sans extension -> .html
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+)$ $1.html [L]
+
+    # URL sans extension -> .php
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+)$ $1.php [L]
 </IfModule>
-
-# Protection du fichier .env
-<Files ".env">
-    Require all denied
-</Files>
-
-# Protection des fichiers Composer
-<FilesMatch "^composer\.(json|lock)$">
-    Require all denied
-</FilesMatch>
-
-# Protection des fichiers cachés (.git, etc.)
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
