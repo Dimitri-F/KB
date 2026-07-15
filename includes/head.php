@@ -11,7 +11,7 @@
     <meta name="description"
         content="<?= htmlspecialchars($description ?? '', ENT_QUOTES, 'UTF-8') ?>">
 
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/page-style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

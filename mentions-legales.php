@@ -1,67 +1,16 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+require_once __DIR__ . '/includes/config.php';
 
-    <title>Mentions légales | Kreizenn Blaz Food Truck</title>
+$title = "Mentions légales | Kreizenn Blaz Food Truck";
 
-    <meta name="description"
-        content="Retrouvez les informations légales relatives au site internet de KB – Le Cœur du Goût.">
+$description = "Retrouvez les informations légales relatives au site internet de KB – Le Cœur du Goût.";
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+include_once __DIR__ . '/includes/head.php';
 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+include_once __DIR__ . '/includes/header.php';
 
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/page-style.css">
-</head>
-
-<body>
-
-    <header>
-        <div class="nav">
-
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/photos/logoKB-fond-transp.png" alt="Logo KB">
-                </a>
-            </div>
-
-            <nav aria-label="Main navigation">
-                <a href="index.html">Accueil</a>
-                <a href="concept.html">Le concept</a>
-                <a href="carte.html">Notre carte</a>
-                <a href="privatisation.php">Privatisation</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <div class="social-links">
-
-                <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
-                    <img src="assets/images/instagram.svg" alt="Instagram" width="24" height="24">
-                </a>
-
-                <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
-                    <img src="assets/images/facebook.svg" alt="Instagram" width="24" height="24">
-                </a>
-            </div>
-            <button class="burger" id="burgerBtn">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
-    </header>
+?>
 
     <section>
         <section class="legal-hero">
@@ -272,120 +221,17 @@
                     </p>
 
                     <p>
-                    <span class="span-mentions-bold">KB – Le Cœur du Goût</span><br>
-                    <span class="span-mentions-bold">E-mail </span>: kreizennblaz@gmail.com<br>
-                    <span class="span-mentions-bold">Téléphone </span>: 0662712708<br>
-                    <span class="span-mentions-bold">Adresse </span>: 17 rue de la Palue du Cosquer
+                        <span class="span-mentions-bold">KB – Le Cœur du Goût</span><br>
+                        <span class="span-mentions-bold">E-mail </span>: kreizennblaz@gmail.com<br>
+                        <span class="span-mentions-bold">Téléphone </span>: 0662712708<br>
+                        <span class="span-mentions-bold">Adresse </span>: 17 rue de la Palue du Cosquer
                     </p>
                 </article>
-                   
+
 
             </div>
 
         </section>
     </section>
 
-    <footer>
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div>
-                    <div class="footer-logo">
-                        <img src="assets/photos/Logo pour tablier.png" alt="Logo KB">
-                    </div>
-
-                    <p>
-                        Cuisine nomade bistronomique locale et de saison.
-                    </p>
-                </div>
-
-                <div>
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li> <a href="concept.html">Le concept</a></li>
-                        <li><a href="carte.html">Notre carte</a></li>
-                        <li><a href="emplacements.html">Emplacements</a></li>
-                        <li><a href="privatisation.php">Privatisation</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Horaires</h4>
-                    <ul>
-                        <li><a href="horaires.html" target="_blank">Consulter les horaires</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>
-                            <a href="mailto:kreizennblaz@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <span>kreizennblaz@gmail.com</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/kb.bzh29/" target="_blank" rel="noopener noreferrer">
-                                <div class="social-footer">
-                                    <img src="assets/images/instagram.svg" class="svg" alt="" width="20" height="20">
-                                    <span class="social-label">kb.bzh29</span>
-                                </div>
-
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank"
-                                rel="noopener noreferrer">
-                                <div class="social-footer">
-                                    <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
-                                    <span class="social-label">Kb Bzh</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+33788922872" target="_blank" rel="noopener noreferrer">
-                                <span>06 62 71 27 08</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-
-                <span>© KB — Tous droits réservés</span>
-
-                <a href="mentions-legales.html" class="span-mentions"><span>Mentions légales</span></a>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-    <div class="mobile-menu" id="mobileMenu">
-
-        <nav class="mobile-nav" aria-label="Menu mobile">
-
-            <a href="index.html">Accueil</a>
-
-            <a href="concept.html">Le concept</a>
-
-            <a href="carte.html">Notre carte</a>
-
-            <a href="privatisation.php">Privatisation</a>
-
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-    </div>
-
-    <script src="assets/js/mobile-menu.js"></script>
-</body>
-
-</html>
+    <?php include_once __DIR__ . '/includes/footer.php'; ?>

@@ -1,189 +1,44 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
 
-  <title>Horaires | Kreizenn Blaz Food Truck</title>
+require_once __DIR__ . '/includes/config.php';
 
-  <meta name="description"
-        content="Consultez les horaires d'ouverture de Kreizenn Blaz dans le Pays Bigouden et le Finistère Sud.">
+$title = "Horaires | Kreizenn Blaz Food Truck";
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500;600&display=swap" rel="stylesheet">
+$description = "Consultez les horaires d'ouverture de Kreizenn Blaz dans le Pays Bigouden et le Finistère Sud.";
 
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+include_once __DIR__ . '/includes/head.php';
 
-  <link rel="stylesheet" href="assets/css/page-style.css">
-</head>
-<body>
+include_once __DIR__ . '/includes/header.php';
 
-<header>
-  <div class="container nav">
+?>
 
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/photos/logoKB-fond-transp.png" alt="Logo KB">
-      </a>
-    </div>
-
-    <nav>
-        <a href="index.html">Accueil</a>
-      <a href="concept.html">Le concept</a>
-      <a href="carte.html">Notre carte</a>
-      <a href="privatisation.php">Privatisation</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="social-links">
-      <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
-        <img src="assets/images/instagram.svg" alt="Instagram" width="24" height="24">
-      </a>
-      
-      <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
-        <img src="assets/images/facebook.svg" alt="Instagram" width="24" height="24">
-      </a>
-    </div>
-
-    <button class="burger" id="burgerBtn">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
-
-  </div>
-</header>
 
 <section class="section-horaire">
 
-    <div class="container horaire">
+  <div class="container horaire">
 
-        <div class="section-label">Horaires</div>
+    <div class="section-label">Horaires</div>
 
-          <div class="reassurance-card" >
+    <div class="reassurance-card">
 
-            <h2>
-                Nos horaires d'ouverture
-            </h2>
-            
-            <ul>
-              <li><span class="label-jour">Lundi</span> : Fermé</li>
-              <li><span class="label-jour">Mardi</span> : 18h00 - 20h30</li>
-              <li><span class="label-jour">Mercredi</span> : 18h00 - 20h30</li>
-              <li><span class="label-jour">Jeudi</span> : Fermé</li>
-              <li><span class="label-jour">Vendredi</span> : 18h00 - 20h30</li>
-              <li><span class="label-jour">Samedi</span> : Fermé</li>
-              <li><span class="label-jour">Dimanche</span> : Fermé</li>
-            </ul>
+      <h2>
+        Nos horaires d'ouverture
+      </h2>
 
-          </div> 
-        
-    </div>
-
-</section>
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-        <div class="footer-logo">
-          <img src="assets/photos/Logo pour tablier.png" alt="Logo KB">
-        </div>
-      
-        <p>
-          Cuisine nomade bistronomique locale et de saison.
-        </p>
-      </div>
-      
-      <div>
-        <h4>Navigation</h4>
-        <ul>
-          <li> <a href="concept.html">Le concept</a></li>
-          <li><a href="carte.html">Notre carte</a></li>
-          <li><a href="emplacements.html">Emplacements</a></li>
-          <li><a href="privatisation.php">Privatisation</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Horaires</h4>
-        <ul>
-          <li><a href="horaires.html" target="_blank">Consulter les horaires</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>
-            <a href="mailto:kreizennblaz@gmail.com" target="_blank" rel="noopener noreferrer">
-              <span>kreizennblaz@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/kb.bzh29/" target="_blank" rel="noopener noreferrer">
-              <div class="social-footer">
-                <img src="assets/images/instagram.svg" class="svg" alt="" width="20" height="20">
-                <span class="social-label">kb.bzh29</span>
-              </div>
-          
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" rel="noopener noreferrer">
-              <div class="social-footer">
-                <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
-                <span class="social-label">Kb Bzh</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+33788922872" target="_blank" rel="noopener noreferrer">
-              <span>06 62 71 27 08</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <span>© KB — Tous droits réservés</span>
-
-      <a href="mentions-legales.html" class="span-mentions"><span>Mentions légales</span></a>
+      <ul>
+        <li><span class="label-jour">Lundi</span> : Fermé</li>
+        <li><span class="label-jour">Mardi</span> : 18h00 - 20h30</li>
+        <li><span class="label-jour">Mercredi</span> : 18h00 - 20h30</li>
+        <li><span class="label-jour">Jeudi</span> : Fermé</li>
+        <li><span class="label-jour">Vendredi</span> : 18h00 - 20h30</li>
+        <li><span class="label-jour">Samedi</span> : Fermé</li>
+        <li><span class="label-jour">Dimanche</span> : Fermé</li>
+      </ul>
 
     </div>
 
   </div>
 
-</footer>
+</section>
 
-<div class="mobile-menu" id="mobileMenu">
-
-    <nav class="mobile-nav" aria-label="menu mobile">
-
-        <a href="index.html">Accueil</a>
-
-        <a href="concept.html">Le concept</a>
-
-        <a href="carte.html">Notre carte</a>
-
-        <a href="privatisation.php">Privatisation</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-</div>
-<script src="assets/js/mobile-menu.js"></script>
-</body>
-</html>
+<?php include_once __DIR__ . '/includes/footer.php'; ?>

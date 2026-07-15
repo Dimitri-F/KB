@@ -2,8 +2,8 @@
     <div class="nav">
 
         <div class="logo">
-            <a href="index.html">
-                <img src="assets/photos/logoKB-fond-transp.png" alt="Logo KB">
+            <a href="<?= BASE_URL ?>/">
+                <img src="<?= BASE_URL ?>/assets/photos/logoKB-fond-transp.png" alt="Logo KB">
             </a>
         </div>
 
@@ -18,11 +18,11 @@
         <div class="social-links">
 
             <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
-                <img src="assets/images/instagram.svg" alt="Icone Instagram" width="24" height="24">
+                <img src="<?= BASE_URL ?>/assets/images/instagram.svg" alt="Icone Instagram" width="24" height="24">
             </a>
 
             <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
-                <img src="assets/images/facebook.svg" alt="Icone Facebook" width="24" height="24">
+                <img src="<?= BASE_URL ?>/assets/images/facebook.svg" alt="Icone Facebook" width="24" height="24">
             </a>
         </div>
         <button class="burger" id="burgerBtn">

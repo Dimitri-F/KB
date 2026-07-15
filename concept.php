@@ -1,79 +1,33 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
 
-  <title>Notre concept | Food Truck Produits Locaux Pays Bigouden</title>
+require_once __DIR__ . '/includes/config.php';
 
-  <meta name="description"
-    content="Découvrez le concept de Kreizenn Blaz : des menus préparés avec des produits locaux et de saison dans le Pays Bigouden.">
+$title = "Notre concept | Food Truck Produits Locaux Pays Bigouden";
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+$description = "Découvrez le concept de Kreizenn Blaz : des menus préparés avec des produits locaux et de saison dans le Pays Bigouden.";
 
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500;600&display=swap" rel="stylesheet">
+include_once __DIR__ . '/includes/head.php';
 
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+include_once __DIR__ . '/includes/header.php';
 
-  <link rel="stylesheet" href="assets/css/page-style.css">
-</head>
-<body>
-
-<header>
-  <div class="container nav">
-
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/photos/logoKB-fond-transp.png" alt="Logo KB">
-      </a>
-    </div>
-
-    <nav aria-label="Main navigation">
-      <a href="index.html">Accueil</a>
-      <a href="concept.html">Le concept</a>
-      <a href="carte.html">Notre carte</a>
-      <a href="privatisation.php">Privatisation</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="social-links">
-      <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
-        <img src="assets/images/instagram.svg" alt="Instagram" width="24" height="24">
-      </a>
-      
-      <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
-        <img src="assets/images/facebook.svg" alt="Instagram" width="24" height="24">
-      </a>
-    </div>
-
-    <button class="burger" id="burgerBtn">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
-
-  </div>
-</header>
+?>
 
 <section class="concept-hero">
 
-    <img src="/assets/photos/photo-page-concept.webp" alt="">
+  <img src="<?= BASE_URL ?>/assets/photos/photo-page-concept.webp" alt="">
 
-    <div class="hero-overlay"></div>
+  <div class="hero-overlay"></div>
 
-    <div class="hero-content">
+  <div class="hero-content">
 
-        <h1>
-            KB – Le cœur du goût 
-        </h1>
-        <p>
-           Avant tout une histoire de passion, de partage et de famille.
-        </p>
+    <h1>
+      KB – Le cœur du goût
+    </h1>
+    <p>
+      Avant tout une histoire de passion, de partage et de famille.
+    </p>
 
-    </div>
+  </div>
 
 </section>
 
@@ -86,34 +40,34 @@
       <div class="section-label">Concept</div>
 
       <div class="parallax-title">
-          <h2>
-            Un food-truck version cheffe
-          </h2>
+        <h2>
+          Un food-truck version cheffe
+        </h2>
 
         <p class="parallax-text">
-            Une aventure née d'une envie simple, proposer une cuisine sincère, gourmande et accessible, le projet prend racine en Bretagne, au cœur du Pays Bigouden.
+          Une aventure née d'une envie simple, proposer une cuisine sincère, gourmande et accessible, le projet prend racine en Bretagne, au cœur du Pays Bigouden.
         </p>
 
         <p class="parallax-text">
-            Derrière ce food truck se cache une conviction forte: les meilleurs moments se vivent souvent autour d'une bonne table, d'un repas partagé et de produits travaillés avec respect.
+          Derrière ce food truck se cache une conviction forte: les meilleurs moments se vivent souvent autour d'une bonne table, d'un repas partagé et de produits travaillés avec respect.
         </p>
       </div>
-      
+
 
       <div class="section-label">Marie la cheffe</div>
 
-        <p>
-            Aux commandes, Marie, cheffe passionnée depuis plus de dix ans. Au fil de son
-            parcours, elle a développé une cuisine qui lui ressemble: généreuse, créative et
-            ouverte sur le monde. Ses voyages, ses rencontres et ses expériences ont nourri
-            son inspiration tout en renforçant son attachement aux produits locaux et aux
-            savoir-faire de son territoire.
-        </p>
+      <p>
+        Aux commandes, Marie, cheffe passionnée depuis plus de dix ans. Au fil de son
+        parcours, elle a développé une cuisine qui lui ressemble: généreuse, créative et
+        ouverte sur le monde. Ses voyages, ses rencontres et ses expériences ont nourri
+        son inspiration tout en renforçant son attachement aux produits locaux et aux
+        savoir-faire de son territoire.
+      </p>
 
     </div>
 
     <div class="story-image">
-      <img src="assets/photos/photo-page-concept-2.webp" alt="Produits KB">
+      <img src="<?= BASE_URL ?>assets/photos/photo-page-concept-2.webp" alt="Produits KB">
     </div>
 
   </div>
@@ -124,21 +78,21 @@
   <div class="container story story-second">
 
     <div class="story-image">
-      <img src="assets/photos/photo-page-concept-3.webp" alt="Produits KB">
+      <img src="<?= BASE_URL ?>/assets/photos/photo-page-concept-3.webp" alt="Produits KB">
     </div>
 
     <div class="story-text">
 
       <p>
-          Le nom KB est bien plus qu'un simple logo. Il fait référence à "Kreizenn Blaz", qui
-          signifie "Le cœur du goût" en breton, mais représente également une aventure
-          profondément familiale.   
+        Le nom KB est bien plus qu'un simple logo. Il fait référence à "Kreizenn Blaz", qui
+        signifie "Le cœur du goût" en breton, mais représente également une aventure
+        profondément familiale.
       </p>
-      
+
       <p>
-          Derrière chaque service, chaque recette et chaque
-          événement se trouvent des proches qui participent au projet, le soutiennent et
-          contribuent à le faire grandir jour après jour.
+        Derrière chaque service, chaque recette et chaque
+        événement se trouvent des proches qui participent au projet, le soutiennent et
+        contribuent à le faire grandir jour après jour.
       </p>
 
     </div>
@@ -149,159 +103,59 @@
 
 <section class="quote-section">
 
-    <div class="container">
+  <div class="container">
 
-        <blockquote>
-            « Plus qu'un food truck, KB est une invitation à prendre le temps. »
-        </blockquote>
+    <blockquote>
+      « Plus qu'un food truck, KB est une invitation à prendre le temps. »
+    </blockquote>
 
-    </div>
+  </div>
 
 </section>
 
 
 
-  <div class="container">
-    <div class="immersive-content">
-      <p>
-        Notre food truck, une Tiny House sur roues, a été imaginé comme un lieu de
-        rencontre et de convivialité. Un endroit où l'on vient autant pour bien manger que
-        pour partager un moment agréable. Ici, la cuisine évolue au rythme des saisons, des
-        arrivages et de l'inspiration de la cheffe, toujours avec la volonté de valoriser les
-        producteurs locaux et les richesses de notre territoire.
-      </p>
-      <p>
-        Plus qu'un food truck, KB est une invitation à prendre le temps. Le temps de
-        découvrir, de savourer et de partager ensemble un moment authentique autour du
-        goût.
-      </p>
-    </div>
+<div class="container">
+  <div class="immersive-content">
+    <p>
+      Notre food truck, une Tiny House sur roues, a été imaginé comme un lieu de
+      rencontre et de convivialité. Un endroit où l'on vient autant pour bien manger que
+      pour partager un moment agréable. Ici, la cuisine évolue au rythme des saisons, des
+      arrivages et de l'inspiration de la cheffe, toujours avec la volonté de valoriser les
+      producteurs locaux et les richesses de notre territoire.
+    </p>
+    <p>
+      Plus qu'un food truck, KB est une invitation à prendre le temps. Le temps de
+      découvrir, de savourer et de partager ensemble un moment authentique autour du
+      goût.
+    </p>
+  </div>
 
-    <div class="immersive-overlay">
-        <img src="assets/photos/photo-page-concept-4.webp" alt="">
-    </div>
+  <div class="immersive-overlay">
+    <img src="assets/photos/photo-page-concept-4.webp" alt="">
+  </div>
 
-  </div> 
+</div>
 
 
 
 
 <section class="concept-cta">
 
-    <div class="container ">
+  <div class="container ">
 
-        <h3>
-            Vous souhaiter en savoir plus?
-        </h3>
+    <h3>
+      Vous souhaiter en savoir plus?
+    </h3>
 
-        <div class="hero-buttons">
-          <a href="carte.html" class="btn-primary">Voir le menu</a>
-          <a href="emplacements.html" class="btn-secondary">Nous trouver</a>
-          <a href="contact.html" class="btn-secondary">Nous contacter</a>
-        </div>
-      
-    </div>
-
-</section>
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-        <div class="footer-logo">
-          <img src="assets/photos/Logo pour tablier.png" alt="Logo KB">
-        </div>
-      
-        <p>
-          Cuisine nomade bistronomique locale et de saison.
-        </p>
-      </div>
-      
-      <div>
-        <h4>Navigation</h4>
-        <ul>
-          <li> <a href="concept.html">Le concept</a></li>
-          <li><a href="carte.html">Notre carte</a></li>
-          <li><a href="emplacements.html">Emplacements</a></li>
-          <li><a href="privatisation.php">Privatisation</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Horaires</h4>
-        <ul>
-          <li><a href="horaires.html" target="_blank">Consulter les horaires</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>
-            <a href="mailto:kreizennblaz@gmail.com" target="_blank" rel="noopener noreferrer">
-              <span>kreizennblaz@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/kb.bzh29/" target="_blank" rel="noopener noreferrer">
-              <div class="social-footer">
-                <img src="assets/images/instagram.svg" class="svg" alt="" width="20" height="20">
-                <span class="social-label">kb.bzh29</span>
-              </div>
-          
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" rel="noopener noreferrer">
-              <div class="social-footer">
-                <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
-                <span class="social-label">Kb Bzh</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+33788922872" target="_blank" rel="noopener noreferrer">
-              <span>06 62 71 27 08</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <span>© KB — Tous droits réservés</span>
-
-      <a href="mentions-legales.html" class="span-mentions"><span>Mentions légales</span></a>
-
+    <div class="hero-buttons">
+      <a href="<?= BASE_URL ?>/carte" class="btn-primary">Voir le menu</a>
+      <a href="<?= BASE_URL ?>/emplacements" class="btn-secondary">Nous trouver</a>
+      <a href="<?= BASE_URL ?>/contact" class="btn-secondary">Nous contacter</a>
     </div>
 
   </div>
 
-</footer>
+</section>
 
-<div class="mobile-menu" id="mobileMenu">
-
-    <nav class="mobile-nav" aria-label="menu mobile">
-
-        <a href="index.html">Accueil</a>
-
-        <a href="concept.html">Le concept</a>
-
-        <a href="carte.html">Notre carte</a>
-
-        <a href="privatisation.php">Privatisation</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-</div>
-<script src="assets/js/mobile-menu.js"></script>
-</body>
-</html>
+<?php include_once __DIR__ . '/includes/footer.php'; ?>

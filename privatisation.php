@@ -1,317 +1,181 @@
 <?php
 
+require_once __DIR__ . '/includes/config.php';
+
+$title = "Privatisation Food Truck | Pays Bigouden";
+
+$description = "Privatisez Kreizenn Blaz pour vos mariages, anniversaires, événements associatifs ou professionnels dans le Pays Bigouden et le Finistère Sud.";
+
+include_once __DIR__ . '/includes/head.php';
+
+include_once __DIR__ . '/includes/header.php';
+
 $success = isset($_GET['success']);
 $error = isset($_GET['error']);
 
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
+<section class="privatisation-section">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <div class="container privatisation">
 
-  <title>Privatisation Food Truck | Pays Bigouden</title>
+    <?php if ($success): ?>
 
-  <meta name="description"
-    content="Privatisez Kreizenn Blaz pour vos mariages, anniversaires, événements associatifs ou professionnels dans le Pays Bigouden et le Finistère Sud.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/page-style.css">
-</head>
-
-<body>
-
-  <header>
-    <div class="container nav">
-
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/photos/logoKB-fond-transp.png" alt="Logo KB">
-        </a>
+      <div class="alert success">
+        Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.
       </div>
 
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="concept.html">Le concept</a>
-        <a href="carte.html">Notre carte</a>
-        <a href="privatisation.php">Privatisation</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <?php endif; ?>
 
-      <div class="social-links">
-        <a href="https://www.instagram.com/kb.bzh29/" target="_blank">
-          <img src="assets/images/instagram.svg" alt="Instagram" width="24" height="24">
-        </a>
 
-        <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank">
-          <img src="assets/images/facebook.svg" alt="Instagram" width="24" height="24">
-        </a>
+    <?php if ($error): ?>
+
+      <div class="alert error">
+        Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.
       </div>
 
-      <button class="burger" id="burgerBtn">
+    <?php endif; ?>
 
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="section-label">Privatisation</div>
 
-      </button>
+    <div class="private-card">
+
+      <h2>
+        Vous souhaitez apporter une touche gourmande et conviviale à votre événement ?
+      </h2>
+
+      <p>Nous proposons des prestations sur mesure pour vos événements privés et
+        professionnels : mariages, anniversaires, repas de famille, événements d'entreprise,
+        inaugurations, marchés ou festivals.
+      </p>
+
+      <p>
+        Notre cuisine est élaborée à partir de produits frais, locaux et de saison, avec une carte adaptée à votre événement et à vos envies.
+      </p>
+
+      <p>
+        Nous assurons les prestations jusqu'à 60 personnes maximum afin de garantir la
+        qualité de notre cuisine et de notre service.
+      </p>
 
     </div>
-  </header>
-
-  <section class="privatisation-section">
-
-    <div class="container privatisation">
-
-      <?php if ($success): ?>
-
-        <div class="alert success">
-          Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.
-        </div>
-
-      <?php endif; ?>
-
-
-      <?php if ($error): ?>
-
-        <div class="alert error">
-          Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.
-        </div>
-
-      <?php endif; ?>
-
-      <div class="section-label">Privatisation</div>
-
-      <div class="private-card">
-
-        <h2>
-          Vous souhaitez apporter une touche gourmande et conviviale à votre événement ?
-        </h2>
-
-        <p>Nous proposons des prestations sur mesure pour vos événements privés et
-          professionnels : mariages, anniversaires, repas de famille, événements d'entreprise,
-          inaugurations, marchés ou festivals.
-        </p>
-
-        <p>
-          Notre cuisine est élaborée à partir de produits frais, locaux et de saison, avec une carte adaptée à votre événement et à vos envies.
-        </p>
-
-        <p>
-          Nous assurons les prestations jusqu'à 60 personnes maximum afin de garantir la
-          qualité de notre cuisine et de notre service.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="concept-cta">
-
-    <div class="container ">
-
-      <h3>
-        N'hésitez pas à nous contacter pour échanger sur votre événement et obtenir un
-        devis personnalisé.
-      </h3>
-
-      <div class="container private-form">
-
-        <form action="traitement-contact.php" method="POST">
-
-          <div class="form-grid">
-
-            <input
-              type="text"
-              name="nom"
-              placeholder="Nom"
-              required>
-
-            <input
-              type="text"
-              name="prenom"
-              placeholder="Prénom"
-              required>
-
-          </div>
-
-          <div class="form-grid">
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Adresse e-mail"
-              required>
-
-            <input
-              type="tel"
-              name="telephone"
-              placeholder="Téléphone"
-              required>
-
-          </div>
-
-          <div class="form-grid">
-
-            <input
-              type="date"
-              name="date_evenement"
-              required>
-
-            <input
-              type="number"
-              name="nb_personnes"
-              placeholder="Nombre de personnes"
-              min="1"
-              max="60"
-              required>
-
-          </div>
-
-          <input
-            type="text"
-            name="lieu_evenement"
-            placeholder="Lieu de l'événement"
-            required>
-
-          <textarea
-            name="message"
-            placeholder="Décrivez votre projet (type d'événement, besoins particuliers...)"
-            rows="6"
-            required></textarea>
-
-          <!-- Honeypot anti-spam -->
-          <input
-            type="text"
-            name="website"
-            style="display:none">
-
-          <button type="submit">
-            Envoyer la demande
-          </button>
-
-        </form>
-      </div>
-
-    </div>
-
-    <p>
-      Chaque demande étant unique, nous étudions votre projet en fonction de vos
-      besoins et de nos disponibilités afin de vous proposer la solution la plus adaptée.
-    </p>
-
-  </section>
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-          <div class="footer-logo">
-            <img src="assets/photos/Logo pour tablier.png" alt="Logo KB">
-          </div>
-
-          <p>
-            Cuisine nomade bistronomique locale et de saison.
-          </p>
-        </div>
-
-        <div>
-          <h4>Navigation</h4>
-          <ul>
-            <li> <a href="concept.html">Le concept</a></li>
-            <li><a href="carte.html">Notre carte</a></li>
-            <li><a href="emplacements.html">Emplacements</a></li>
-            <li><a href="privatisation.php">Privatisation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Horaires</h4>
-          <ul>
-            <li><a href="horaires.html" target="_blank">Consulter les horaires</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li>
-              <a href="mailto:kreizennblaz@gmail.com" target="_blank" rel="noopener noreferrer">
-                <span>kreizennblaz@gmail.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/kb.bzh29/" target="_blank" rel="noopener noreferrer">
-                <div class="social-footer">
-                  <img src="assets/images/instagram.svg" class="svg" alt="" width="20" height="20">
-                  <span class="social-label">kb.bzh29</span>
-                </div>
-
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/profile.php?id=61574348263732" target="_blank" rel="noopener noreferrer">
-                <div class="social-footer">
-                  <img src="assets/images/facebook.svg" class="svg" alt="" width="20" height="20">
-                  <span class="social-label">Kb Bzh</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+33788922872" target="_blank" rel="noopener noreferrer">
-                <span>06 62 71 27 08</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <span>© KB — Tous droits réservés</span>
-
-        <a href="mentions-legales.html" class="span-mentions"><span>Mentions légales</span></a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <div class="mobile-menu" id="mobileMenu">
-
-    <nav class="mobile-nav" aria-label="menu mobile">
-
-      <a href="index.html">Accueil</a>
-
-      <a href="concept.html">Le concept</a>
-
-      <a href="carte.html">Notre carte</a>
-
-      <a href="privatisation.php">Privatisation</a>
-
-      <a href="contact.html">Contact</a>
-
-    </nav>
 
   </div>
-  <script src="assets/js/mobile-menu.js"></script>
-  <script src="assets/js/form.js"></script>
-</body>
 
-</html>
+</section>
+
+<section class="concept-cta">
+
+  <div class="container ">
+
+    <h3>
+      N'hésitez pas à nous contacter pour échanger sur votre événement et obtenir un
+      devis personnalisé.
+    </h3>
+
+    <div class="container private-form">
+
+      <form action="traitement-contact.php" method="POST">
+
+        <div class="form-grid">
+
+          <label for="nom" style="visibility: hidden;">Nom</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Nom"
+            required>
+
+          <label for="prenom" style="visibility: hidden;">Prénom</label>
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            placeholder="Prénom"
+            required>
+
+        </div>
+
+        <div class="form-grid">
+
+          <label for="email" style="visibility: hidden;">Adresse e-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Adresse e-mail"
+            required>
+
+          <label for="telephone" style="visibility: hidden;">Téléphone</label>
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            placeholder="Téléphone"
+            required>
+
+        </div>
+
+        <div class="form-grid">
+
+          <label for="date_evenement" style="visibility: hidden;">Date de l'événement</label>
+          <input
+            type="date"
+            id="date_evenement"
+            name="date_evenement"
+            required>
+
+          <label for="nb_personnes">Nombre de personnes</label>
+          <input
+            type="number"
+            id="nb_personnes"
+            name="nb_personnes"
+            placeholder="Nombre de personnes"
+            min="1"
+            max="60"
+            required>
+
+        </div>
+
+        <label for="lieu_evenement" style="visibility: hidden;">Lieu de l'événement</label>
+        <input
+          type="text"
+          id="lieu_evenement"
+          name="lieu_evenement"
+          placeholder="Lieu de l'événement"
+          required>
+
+        <label for="message" style="visibility: hidden;">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Décrivez votre projet (type d'événement, besoins particuliers...)"
+          rows="6"
+          required></textarea>
+
+        <!-- Honeypot anti-spam -->
+        <label for="website" style="display:none;">Website</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          style="display:none">
+
+        <button type="submit">
+          Envoyer la demande
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+
+  <p>
+    Chaque demande étant unique, nous étudions votre projet en fonction de vos
+    besoins et de nos disponibilités afin de vous proposer la solution la plus adaptée.
+  </p>
+
+</section>
+
+<?php include_once __DIR__ . '/includes/footer.php'; ?>
