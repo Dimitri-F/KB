@@ -194,24 +194,6 @@
 
 <div class="mobile-menu" id="mobileMenu">
 
-    <nav class="mobile-nav" aria-label="Navigation moile">
-
-        <a href="index.html">Accueil</a>
-
-        <a href="concept.html">Le concept</a>
-
-        <a href="carte.html">Notre carte</a>
-
-        <a href="privatisation.html">Privatisation</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-
     <nav class="mobile-nav" aria-label="menu mobile">
 
         <a href="index.html">Accueil</a>
