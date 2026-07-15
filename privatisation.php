@@ -12,7 +12,10 @@ $error = isset($_GET['error']);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>KB — Cuisine nomade bistronomique</title>
+  <title>Privatisation Food Truck | Pays Bigouden</title>
+
+  <meta name="description"
+    content="Privatisez Kreizenn Blaz pour vos mariages, anniversaires, événements associatifs ou professionnels dans le Pays Bigouden et le Finistère Sud.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,36 +129,75 @@ $error = isset($_GET['error']);
 
         <form action="traitement-contact.php" method="POST">
 
+          <div class="form-grid">
+
+            <input
+              type="text"
+              name="nom"
+              placeholder="Nom"
+              required>
+
+            <input
+              type="text"
+              name="prenom"
+              placeholder="Prénom"
+              required>
+
+          </div>
+
+          <div class="form-grid">
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Adresse e-mail"
+              required>
+
+            <input
+              type="tel"
+              name="telephone"
+              placeholder="Téléphone"
+              required>
+
+          </div>
+
+          <div class="form-grid">
+
+            <input
+              type="date"
+              name="date_evenement"
+              required>
+
+            <input
+              type="number"
+              name="nb_personnes"
+              placeholder="Nombre de personnes"
+              min="1"
+              max="60"
+              required>
+
+          </div>
+
           <input
             type="text"
-            name="nom"
-            placeholder="Votre nom"
+            name="lieu_evenement"
+            placeholder="Lieu de l'événement"
             required>
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Votre email"
-            required>
-
-          <input
-            type="tel"
-            name="telephone"
-            placeholder="Votre téléphone">
 
           <textarea
             name="message"
-            placeholder="Votre message"
+            placeholder="Décrivez votre projet (type d'événement, besoins particuliers...)"
+            rows="6"
             required></textarea>
 
-          <!--  anti-spam -->
+          <!-- Honeypot anti-spam -->
           <input
             type="text"
             name="website"
             style="display:none">
 
           <button type="submit">
-            Envoyer
+            Envoyer la demande
           </button>
 
         </form>
@@ -253,7 +295,7 @@ $error = isset($_GET['error']);
 
   <div class="mobile-menu" id="mobileMenu">
 
-    <nav class="mobile-nav">
+    <nav class="mobile-nav" aria-label="menu mobile">
 
       <a href="index.html">Accueil</a>
 

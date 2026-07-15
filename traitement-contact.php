@@ -26,16 +26,41 @@ if (!empty($_POST['website'])) {
 */
 
 $nom = trim($_POST['nom'] ?? '');
+$prenom = trim($_POST['prenom'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $telephone = trim($_POST['telephone'] ?? '');
+$date_evenement = trim($_POST['date_evenement'] ?? '');
+$nb_personnes = trim($_POST['nb_personnes'] ?? '');
+$lieu_evenement = trim($_POST['lieu_evenement'] ?? '');
 $message = trim($_POST['message'] ?? '');
+
+/*
+|--------------------------------------------------------------------------
+| Formatage de la date
+|--------------------------------------------------------------------------
+*/
+
+$date_evenement_formatee = '';
+
+if (!empty($date_evenement)) {
+    $date = DateTime::createFromFormat('Y-m-d', $date_evenement);
+
+    if ($date !== false) {
+        $date_evenement_formatee = $date->format('d-m-Y');
+    }
+}
 
 if (
     empty($nom) ||
+    empty($prenom) ||
     empty($email) ||
+    empty($telephone) ||
+    empty($date_evenement) ||
+    empty($nb_personnes) ||
+    empty($lieu_evenement) ||
     empty($message)
 ) {
-    die('Tous les champs obligatoires doivent être remplis.');
+    die('Tous les champs sont obligatoires.');
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -70,29 +95,63 @@ try {
 
     $mail->addAddress($_ENV['MAIL_TO']);
 
-    $mail->Subject = 'Nouveau message depuis le site KB';
+    $mail->Subject = 'Nouvelle demande de privatisation - Site KB';
 
     $mail->isHTML(true);
 
-    $mail->Body = "
-        <h2>Nouveau message reçu</h2>
+    $mail->Body = "<h2>Nouvelle demande de privatisation</h2>
 
-        <p><strong>Nom :</strong> " . htmlspecialchars($nom) . "</p>
+<table cellpadding='8' cellspacing='0' border='1' style='border-collapse:collapse;font-family:Arial,sans-serif;'>
 
-        <p><strong>Email :</strong> " . htmlspecialchars($email) . "</p>
+<tr>
+<td><strong>Nom</strong></td>
+<td>" . htmlspecialchars($nom) . "</td>
+</tr>
 
-        <p><strong>Téléphone :</strong> " . htmlspecialchars($telephone) . "</p>
+<tr>
+<td><strong>Prénom</strong></td>
+<td>" . htmlspecialchars($prenom) . "</td>
+</tr>
 
-        <p><strong>Message :</strong></p>
+<tr>
+<td><strong>Email</strong></td>
+<td>" . htmlspecialchars($email) . "</td>
+</tr>
 
-        <p>" . nl2br(htmlspecialchars($message)) . "</p>
-    ";
+<tr>
+<td><strong>Téléphone</strong></td>
+<td>" . htmlspecialchars($telephone) . "</td>
+</tr>
+
+<tr>
+<td><strong>Date de l'événement</strong></td>
+<td>" . htmlspecialchars($date_evenement_formatee) . "</td>
+</tr>
+
+<tr>
+<td><strong>Nombre de personnes</strong></td>
+<td>" . htmlspecialchars($nb_personnes) . "</td>
+</tr>
+
+<tr>
+<td><strong>Lieu de l'événement</strong></td>
+<td>" . htmlspecialchars($lieu_evenement) . "</td>
+</tr>
+
+</table>
+
+<h3>Message</h3>
+
+<p>" . nl2br(htmlspecialchars($message)) . "</p>
+
+";
+
+    $mail->addReplyTo($email, $prenom . ' ' . $nom);
 
     $mail->send();
 
     header('Location: privatisation.php?success=1');
     exit;
-
 } catch (Exception $e) {
 
     error_log($mail->ErrorInfo);
