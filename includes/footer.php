@@ -71,7 +71,10 @@
          <div class="footer-bottom">
 
              <span>© KB — Tous droits réservés</span>
+             <span class="span-separator">|</span>
              <a href="<?= BASE_URL ?>/mentions-legales"><span class="span-mentions">Mentions légales</span></a>
+             <span class="span-separator">|</span>
+             <a href="" target="_blank" rel="noopener noreferrer"><span class="span-mentions">Site réalisé par Dimitri Fonsat</span></a>
          </div>
 
      </div>

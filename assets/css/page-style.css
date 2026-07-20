@@ -249,6 +249,25 @@ body {
 }
 
 /* FORMULAIRE */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.private-form input,
+.private-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 22px;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    font-family: inherit;
+    background: #fafafa;
+    transition: .3s ease;
+}
+
 .private-form {
     max-width: 700px;
     margin: auto;
@@ -280,7 +299,6 @@ body {
 .private-form textarea {
     min-height: 180px;
     resize: vertical;
-    font-size: 1.2em;
 }
 
 .private-form input:focus,
@@ -318,25 +336,19 @@ body {
     transform: translateY(0);
 }
 
-@media(max-width:768px) {
-
-    .private-form {
-        padding: 32px 24px;
-        border-radius: 24px;
-    }
-
-    .private-form button {
-        width: 100%;
-        justify-content: center;
-    }
-
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* PAGE EMPLACEMENTS */
-
-/* .map-section{
-    padding: clamp(60px, 8vw, 100px) 20px;
-} */
 
 .map-section h2 {
     text-align: center;
@@ -479,7 +491,7 @@ body {
 
 .legal-hero {
 
-    padding: 120px 0 20px;
+    padding: 70px 0 20px;
 
 }
 
@@ -515,12 +527,6 @@ body {
 
 }
 
-/* .legal-content {
-
-    padding-bottom: 120px;
-
-} */
-
 .legal-content .container {
 
     max-width: 900px;
@@ -529,7 +535,7 @@ body {
 
 .legal-content article {
 
-    padding: 48px 0;
+    padding: 20px 0;
 
     border-top: 1px solid rgba(0, 0, 0, .08);
 
@@ -647,6 +653,21 @@ body {
 
     .pdf-download a {
         width: 100%;
+    }
+
+      
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+        
+    .private-form {
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+
+    .private-form button {
+        width: 100%;
+        justify-content: center;
     }
 }
 

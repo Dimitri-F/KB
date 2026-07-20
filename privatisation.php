@@ -79,7 +79,7 @@ $error = isset($_GET['error']);
 
         <div class="form-grid">
 
-          <label for="nom" style="visibility: hidden;">Nom</label>
+          <label for="nom" class="sr-only">Nom</label>
           <input
             type="text"
             id="nom"
@@ -87,7 +87,7 @@ $error = isset($_GET['error']);
             placeholder="Nom"
             required>
 
-          <label for="prenom" style="visibility: hidden;">Prénom</label>
+          <label for="prenom" class="sr-only">Prénom</label>
           <input
             type="text"
             id="prenom"
@@ -99,7 +99,7 @@ $error = isset($_GET['error']);
 
         <div class="form-grid">
 
-          <label for="email" style="visibility: hidden;">Adresse e-mail</label>
+          <label for="email" class="sr-only">Adresse e-mail</label>
           <input
             type="email"
             id="email"
@@ -107,7 +107,7 @@ $error = isset($_GET['error']);
             placeholder="Adresse e-mail"
             required>
 
-          <label for="telephone" style="visibility: hidden;">Téléphone</label>
+          <label for="telephone" class="sr-only">Téléphone</label>
           <input
             type="tel"
             id="telephone"
@@ -119,14 +119,14 @@ $error = isset($_GET['error']);
 
         <div class="form-grid">
 
-          <label for="date_evenement" style="visibility: hidden;">Date de l'événement</label>
+          <label for="date_evenement" class="sr-only">Date de l'événement</label>
           <input
             type="date"
             id="date_evenement"
             name="date_evenement"
             required>
 
-          <label for="nb_personnes">Nombre de personnes</label>
+          <label for="nb_personnes" class="sr-only">Nombre de personnes</label>
           <input
             type="number"
             id="nb_personnes"
@@ -138,7 +138,7 @@ $error = isset($_GET['error']);
 
         </div>
 
-        <label for="lieu_evenement" style="visibility: hidden;">Lieu de l'événement</label>
+        <label for="lieu_evenement" class="sr-only">Lieu de l'événement</label>
         <input
           type="text"
           id="lieu_evenement"
@@ -146,7 +146,7 @@ $error = isset($_GET['error']);
           placeholder="Lieu de l'événement"
           required>
 
-        <label for="message" style="visibility: hidden;">Message</label>
+        <label for="message" class="sr-only">Message</label>
         <textarea
           id="message"
           name="message"

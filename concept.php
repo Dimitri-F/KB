@@ -67,7 +67,7 @@ include_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="story-image">
-      <img src="<?= BASE_URL ?>assets/photos/photo-page-concept-2.webp" alt="Produits KB">
+      <img src="<?= BASE_URL ?>/assets/photos/photo-page-concept-2.webp" alt="Produits KB">
     </div>
 
   </div>
